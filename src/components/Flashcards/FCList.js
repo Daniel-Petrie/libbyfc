@@ -2,9 +2,10 @@ import React from 'react'
 import FC from './FC';
 
 
-function FCList({flashcards}) {
+function FCList({fcList}) {
+  console.log(fcList)
   return (
-    <div>{flashcards.map(flashcard => {
+    <div>{fcList.map(flashcard => {
       return <FC key={flashcard.id} fc={flashcard}/>
     })}</div>
   )

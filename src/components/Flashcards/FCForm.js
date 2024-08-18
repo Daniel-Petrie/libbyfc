@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 
-function FCForm() {
+function FCForm({fcList, setFcList}) {
 
+ 
   const [FC, setFC] = useState({
     message: ""
   })
@@ -12,6 +13,7 @@ function FCForm() {
   }
   const handleSubmit = e => {
     e.preventDefault()
+    setFcList([...fcList, FC])
   }
 
   return (
