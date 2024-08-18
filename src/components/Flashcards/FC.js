@@ -4,6 +4,7 @@ function FC(props) {
   return (
     <div>
         {props.fc.message}
+       
     </div>
   )
 }

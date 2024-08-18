@@ -98,40 +98,280 @@ code {
   right:0;
 }
 
-.create-fc, .view-fc{
-  background: #D782BA;
-  border: 1px solid #D782BA;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 16px;
-  height: 120px;
-  
-  outline: 0;
-  padding: 12px 32px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  margin: 0 24px 0 24px;
+/* CREATEFC */
+
+/* Overall container for CreateFC */
+.create-fc-container {
+  width: 100%;
+  min-height: 90vh;
+  background-color: #EFC7E5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.create-fc:hover, .view-fc:hover,
-.create-fc:active, .view-fc:active {
-  background-color: initial;
-  background-position: 0 0;
+/* Styling for the header */
+.app-header {
+  font-size: 48px;
+  font-weight: bold;
+  color: #D782BA;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Container for creating new lists */
+.list-creation {
+  background: #FFFFFF;
+  border: 1px solid #D782BA;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Input field for list title */
+.list-input {
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #D782BA;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+/* Button for creating lists */
+.create-list-btn {
+  background: #D782BA; /* Pink color */
+  border: 1px solid #D782BA;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.create-list-btn:hover {
+  background-color: #F4A8B8; /* Lighter pink for hover effect */
   color: #D782BA;
 }
 
-.create-fc:active, .view-fc:active {
-  opacity: .5;
+.create-list-btn:active {
+  opacity: 0.8;
+}
+
+/* Styling for the flashcard section */
+.flashcard-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.flashcard-section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #D782BA;
+  background-color: #F9E4E8; /* Light pink background for better contrast */
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* FC FORM *//* Container for FCForm */
+.fc-form-container {
+  background: #FFFFFF;
+  border: 1px solid #D782BA;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Styling for FCForm */
+/* Container for FCForm */
+.fc-form-container {
+  background: #FFFFFF;
+  border: 1px solid #D782BA;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px; /* Set form width to 800 pixels */
+  width: 100%;
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Styling for FCForm */
+.fc-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fc-input {
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #D782BA;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 1200px; /* Ensure inputs are as wide as the form */
+  margin-bottom: 15px;
+}
+
+/* Button for adding flashcards */
+.create-list-btn {
+  background: #D782BA; /* Pink color */
+  border: 1px solid #D782BA;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.create-list-btn:hover {
+  background-color: #F4A8B8; /* Lighter pink for hover effect */
+  color: #D782BA;
+}
+
+.create-list-btn:active {
+  opacity: 0.8;
+}
+
+/* List of existing flashcards */
+.flashcard-list {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.flashcard-list h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #D782BA;
+}
+
+.flashcard-item {
+  background: #F9E4E8;
+  border: 1px solid #D782BA;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+/* VIEW FC  */
+
+/* Container for ViewFC */
+.view-fc-container {
+  width: 100%;
+  min-height: 90vh;
+  background-color: #EFC7E5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header for ViewFC */
+.app-header {
+  font-size: 48px;
+  font-weight: bold;
+  color: #D782BA;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Container for flashcard lists */
+.flashcard-lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Same width as the form */
+}
+
+/* Individual flashcard list container */
+.flashcard-list-container {
+  background: #FFFFFF;
+  border: 1px solid #D782BA;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Title of the flashcard list */
+.flashcard-list-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #D782BA;
+}
+
+/* List of flashcards */
+.flashcard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Individual flashcard item */
+.flashcard-item {
+  background: #F9E4E8;
+  border: 1px solid #D782BA;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Delete button */
+.delete-btn {
+  background: #D782BA;
+  border: 1px solid #D782BA;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.delete-btn:hover {
+  background-color: #F4A8B8; /* Lighter pink for hover effect */
+  color: #D782BA;
+}
+
+.delete-btn:active {
+  opacity: 0.8;
 }
